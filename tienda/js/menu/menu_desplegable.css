@@ -1,0 +1,85 @@
+/* ================================================
+   FONT FACE
+   ============================================== */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#cssmenu {
+  width: 290px;
+  font-family:'Roboto Condensed', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+#cssmenu ul ul {
+  display: none;
+}
+#cssmenu > ul > li.active > ul {
+  display: block;
+}
+#cssmenu > ul > li > a {
+  padding: 9px 0px 9px 20px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 15px;
+  text-decoration: none;
+  color: #333;
+  display: block;
+  background-color: #fff;
+  border-bottom:1px solid #ccc;
+}
+
+.bienvenido {
+  display: block;
+  padding: 9px 0px 2px 20px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #333;
+  background-color:#EAEAEA !important;
+  }
+.categ {
+	font-weight:700;
+	font-size: 14px !important;
+	}
+.categdisc {
+	font-weight:700;
+	font-size: 14px !important;
+	color:#339999 !important;
+	}
+
+/* ==============================================
+   ICONOS
+   ============================================ */
+.nav_user_act,
+.nav_carrito_act,
+.nav_salir {
+	display:block;
+	padding-left:43px !important;
+	background-repeat: no-repeat;
+	background-position: 18px center;
+	background-size: 16px 15px;
+	background-color:#EAEAEA !important;
+	border-bottom:1px solid #fff !important;
+	color:#339999 !important;
+	}
+.nav_user_act {
+	background-image: url(../../img/icon_users.png); }
+.nav_carrito_act {
+	background-image: url(../../img/icon_carrito.png); }
+.nav_salir { 
+	background-image: url(../../img/icon_salir.png); }
+

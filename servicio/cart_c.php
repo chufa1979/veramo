@@ -1,0 +1,2 @@
+<div id="login_user">Bienvenido/a <strong><?php echo $_SESSION['nombreapellido'];?></strong>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="misdatos.php">Mis datos</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="salir.php">Salir</a><br />
+</div>

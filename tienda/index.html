@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>VERAMO &bull; Tienda Mayorista</title>
+<script src="js/config.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+	   $("#logines").click(function(){
+			$(".loading").show;
+			usuario=$("#usuario").val();
+			contrasena=$("#contrasena").val();
+
+
+			 $.ajax({
+				type: "POST",
+				url: urlServicios + "control.php",
+				data: "usuario="+usuario+"&contrasena="+contrasena,
+				dataType: "json",
+				success: function(html){
+					alert(html.success);
+				  if(html.success=='true')
+				  {
+					$.session.set("user", html.user);
+					$.session.set("nombreapellido", html.nombreapellido);
+					$.session.set("razon_social", html.razon_social);
+					$.session.set("iduser", html.iduser);
+
+					$(location).attr('href','home.html')
+					console.log("INGRESO");
+					//$("#login_form").fadeOut("normal");
+					//$("#shadow").fadeOut();
+					//$("#profile").html("<a href='logout.php' id='logout'>Logout</a>");
+				  }
+				  else
+				  {
+						if(html==1)
+						{
+							$(".mensagem-erro").html("*Usuario deshabilitado");
+						}
+						if(html==2)
+						{
+							$(".mensagem-erro").html("*Error de Usuario");
+						}
+						if(html==3)
+						{
+							$(".mensagem-erro").html("*Error de Contrase&ntilde;a");
+						}
+						
+						///$(".loading").hide;
+				  }
+				},
+				beforeSend:function()
+				{
+					 $(".loading").show;
+				}
+			});
+			 return false;
+		});
+	});
+	</script>
+
+<link href="css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	
+<div class="top"><img src="img/veramo.png" width="230" height="55" alt="VERAMO &bull; Tienda Mayorista" /></div>
+<div class="login">
+  <form id="formulario" name="formulario" method="post" action="control.php">
+<div class="mensagem-erro">
+	
+</div>
+    <input name="usuario" type="text" class="login_campo" id="usuario" placeholder="Usuario (e-mail)*" required="required" />
+    <input name="contrasena" type="password" required="required" class="login_campo" id="contrasena" placeholder="Contrase&ntilde;a*" />
+	<!-- <input name="button" type="submit" class="enviar" id="button" value="INGRESAR" /> -->
+	<input type="button" name="logines" id="logines" class="enviar" value="INGRESARA" />
+  </form>
+</div>
+<div class="loading">
+		<img src="img/loading.svg" alt="">
+	</div>
+</body>
+</html>

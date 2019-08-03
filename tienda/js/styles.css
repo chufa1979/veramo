@@ -1,0 +1,594 @@
+/* =====================================
+   FONT FACE
+   ===================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/* ======================================
+   GENERAL
+   ====================================== */
+body, html {
+	background-color: #FFF;
+	margin: 0px;
+	padding: 0px;
+    font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height:normal;
+	color:#333;
+	height:100%;
+	}
+html { -webkit-text-size-adjust: 100%;	}
+
+img { border: 0px; }
+
+a {	text-decoration: none; color:#333;}
+
+strong { font-weight: 800; }
+
+p { padding:0; margin: 0}
+
+.main {
+	width:1000px;
+	padding:0 10px;
+	margin:0 auto;
+	overflow:auto;
+	clear:both;
+	}
+.contenido {
+	width: 100%;
+	clear:both;
+	padding:50px 0px;
+	}
+
+/* ====================================
+   ENCABEZADO
+   ==================================== */
+#top {
+	width:100%;
+	position:fixed;
+	z-index:9999;
+	overflow:auto;
+	background-image: url(../img/back_top.png);
+	background-repeat: repeat-x;
+	}
+.encabezado {
+	width:100%;
+	padding:20px 0px;
+	overflow:auto;
+	background-color:#FFF;
+	}
+.logo {
+	width:230px;
+	margin:0 auto;
+	}
+#login_user {
+	position:fixed;
+	right:30px;
+	top: 25px;
+	width:auto;
+	text-align:right;
+	line-height:22px;
+	}
+#login_user a { color:#333; }
+#login_user .cart {
+	color:#009999;
+	font-size:13px;
+	display:block;
+	background-image: url(../img/icon_pedido.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+	padding-right:25px;
+	}
+
+/* ===================================
+   MENU PPAL
+   =================================== */
+#menu_ppal {
+	float:left;
+	width:100%;
+	margin:0 auto;
+	padding:10px 0px;
+	font-size:14px;
+	line-height:14px;
+	border-bottom:1px solid #989898;
+	border-top:1px solid #989898;
+	background-image: url(../img/back_menu.png);
+	text-align:center;
+	}
+#menu_ppal .main {
+	width:100%;
+	padding:0px;
+	overflow:hidden;
+	}	
+	
+#menu_ppal a {
+	font-family:'Roboto Condensed', sans-serif;
+	font-size:15px;
+	line-height:15px;
+	color:#000;
+	display: inline-block;
+	text-align:center;
+	padding:0px 7px;
+	font-weight:400;
+	text-transform: uppercase;
+	}
+#menu_ppal a:hover {
+	color:#009999;
+	font-weight:400;
+	}
+#menu_ppal a span {color:#F00;}
+
+/* ======================================
+   SECCIONES
+   ====================================== */
+h1 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size:50px;
+	color:#74CED1;
+	display:block;
+	margin:0;
+	padding:0 0 50px 0;
+	}
+
+/* HOME ============================ */
+.imagen_resp {
+	float:left;
+	width:100%;
+	padding-top:96px;
+	clear:both;
+	}
+.imagen_resp img {
+	width:100%;
+	height:auto;
+	}
+
+.vacia {
+	position:relative;
+	}
+#banner_titulo {
+	position: absolute;
+	width:450px;
+	left: 12%;
+	top: -280px;
+	z-index:1;
+	font-family: 'Raleway', sans-serif;
+	font-size:60px;
+	font-weight:300;
+	color:#FFF;
+	}
+#home {
+	width: 100%;
+	clear:both;
+	padding:50px 0px;
+	}
+.home_categoria {
+	float:left;
+	width:220px;
+	height:330px;
+	border-bottom:1px solid #666;
+	cursor: pointer;
+	margin:15px;
+	background-size:100% 100%; 
+	}
+.home_categoria .titulo {
+	display:block;
+	font-family:'Roboto Condensed', sans-serif;
+	font-size:15px;
+	text-align:center;
+	background-image: url(../img/back_cate.png);
+	padding:13px 0px;
+	margin-top:284px;
+	height:20px;
+	color:#000;
+	}
+.categoria_img {
+	background-image:url(../upload/categorias/cate_camisas.jpg);
+	}
+	
+/* CATEGORIA ============================ */
+#categoria_titulo {
+	position: absolute;
+	width:800px;
+	left: 12%;
+	top: -100px;
+	z-index:1;
+	font-family: 'Raleway', sans-serif;
+	font-size:60px;
+	font-weight:100;
+	color:#fff;
+	letter-spacing: 0.1em;
+	}
+.ruta {
+	width:auto;
+	height:30px;
+	margin:0 16px;
+	}
+.ordenar {
+	float:right;
+	width:auto;
+	}
+.prod_listado {
+	float:left;
+	width:300px;
+	margin:16px;
+	font-family:'Roboto', sans-serif;
+	font-size: 14px;
+	color:#333;
+	cursor:pointer;
+	text-align:center;
+	}
+.prod_listado .foto {
+	width:300px;
+	height:450px;
+	}
+.prod_listado .foto img {
+	width:100%;
+	height:auto;
+	-webkit-transition: .4s ease;
+	-o-transition: .4s ease;
+	-moz-transition: .4s ease;
+	transition: .4s ease;
+	}
+.prod_listado .foto img:hover {
+	-webkit-transform: scale(0.95);
+	-moz-transform: scale(0.95);
+	-o-transform: scale(0.95);
+	transform: scale(0.95);
+	}
+.prod_listado .nombre {
+	width:100%;
+	margin-top:8px;
+	color:#000;
+	height:50px;
+	}
+.prod_listado .nombre span {
+	font-family: 'Raleway', sans-serif;
+	font-size:15px;
+	}
+.prod_listado .tags {
+	position:absolute;
+	top:-70px;
+	right:0px;
+	z-index:10;
+	}
+
+/* PRODUCTO DETALLE ================== */
+.contenido_prod {
+	width: 100%;
+	clear:both;
+	padding:150px 0px 50px 0px;
+	}
+.contenido_prod .main {
+	overflow:hidden;
+	}
+#columna1 {
+	float:left;
+	width:100px;
+	padding:0px 25px 0px 16px;
+	}
+#columna2 {
+	float:left;
+	width:450px;
+	height:675px;
+	margin-right:40px;
+	}
+#columna3 {
+	float:left;
+	width:355px;
+	font-size:15px;
+	}
+.prod_thumb {
+	float:left;
+	width:100px;
+	height:150px;
+	margin-bottom:25px;
+	}
+#columna2 img,
+.prod_thumb img {
+	width:100%;
+	height:100%;
+	}
+.prod_descripcion {
+	width:100%;
+	}
+.prod_nombre {
+	font-family: 'Raleway', sans-serif;
+	font-size:30px;
+	letter-spacing: 0.15em;
+	}
+.prod_art {
+	color:#808080;
+	border-bottom:1px solid #ccc;
+	height:30px;
+	}
+.prod_subtitulo1,
+.prod_subtitulo2 {
+	font-family:'Roboto Condensed', sans-serif;
+	font-size:14px;
+	font-weight: bold;
+	}
+.prod_subtitulo1 { padding-top:3px; }
+.prod_colores {
+	border-bottom:1px #999 solid;
+	padding:5px 0px 10px 0px;
+	margin-bottom:20px;
+	}
+.prod_colores_listado {
+	border-bottom:1px #999 dashed;
+	padding:3px 0px;
+	}
+.prod_precios {
+	padding-top:15px;
+	border-bottom:1px solid #ccc;
+	height:30px;
+	margin-bottom:10px;
+	}
+.prod_precio_unid {
+	font-size:18px;
+	font-weight:500;
+	color:#339999;
+	}
+.prod_pedir {
+	height:75px;
+	}
+.prod_guia {
+	height:70px;
+	font-size:11px;
+	color:#808080;
+	margin-bottom:5px;
+	}
+.prod_guia .linea {
+	border-right:1px solid #999;
+	}
+.prod_relacionados {
+	width:auto;
+	margin:80px 16px 15px 16px;
+	text-align:center;
+	font-family: 'Raleway', sans-serif;
+	font-size:25px;
+	letter-spacing: 0.15em;
+	color:#4D4D4D;
+	background-image: url(../img/back_relacionados.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	}
+.sinstock {
+	background-color:#E5E5E5;
+	color:#4D4D4D;
+	font-size:20px;
+	width:100%;
+	padding:10px 0px;
+	border:none;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.1em;
+	display:block;
+	text-align:center;
+	}
+	
+/* ZOOM */
+.zoom {
+	display:inline-block;
+	position: relative;
+	}
+.zoom:after {
+	content:'';
+	display:block;
+	width:50px;
+	height:50px;
+	position:absolute;
+	bottom:0;
+	right:0;
+	background-image: url(../img/icon_zoom.png);
+	}
+.zoom img {
+	display: block;
+	cursor: move;
+	}
+.zoom img::selection {
+	background-color: transparent;
+	}
+
+/* PEDIDO ========================== */
+.ruta2 {
+	width:auto;
+	height:30px;
+	border-bottom:2px solid #339999;
+	margin-bottom:30px;
+	}
+.pedido_top {
+	width:100%;
+	padding:7px 0px;
+	background-color:#F1F1F1;
+	border-top:1px solid #999;
+	border-bottom:1px solid #999;
+	font-size:12px;
+	width:100%;
+	}
+.pedido_listado {
+	width:100%;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	margin:18px 0px;
+	}
+.pedido_listado img {
+	width:auto;
+	height:200px;
+	}
+.pedido_listado .prod {
+	padding-top:8px;
+	}
+.pedido_listadotalle {
+	width:100%;
+	padding:5px 0px;
+	border-bottom:1px dashed #ccc;
+	}
+.pedido_listadotalle .bot {
+	border:none !important;
+	}
+.pedido_cant {
+	text-align:center;
+	width:30px;
+	padding:2px;
+	font-size:12px;
+	border:1px solid #ccc !important;
+	}
+.pedido_total {
+	width:100%;
+	color:#339999;
+	border-top:2px solid #339999;
+	border-bottom:2px solid #339999;
+	padding:8px 0px;
+	font-size:18px;
+	font-weight:700;
+	}
+.pedido_botones {
+	width:100%;
+	padding:30px 0px;
+	text-align:right;
+	}
+
+/* CONFIRMAR PEDIDO =================== */
+.misdatos_listado {
+	padding:7px 0px;
+	border-bottom:1px dashed #ccc;
+	}
+.comentarios {
+	width:100%;
+	padding:7px 0px;
+	}
+.datos_modif {
+	color:#339999;
+	}
+
+
+
+/* FORMULARIOS ===================== */
+input, textarea, select, button {
+	font-family:'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	-webkit-appearance: none;
+    -webkit-border-radius: 0;
+	border: 1px solid #CCC;
+	color:#333;
+	}
+.cant_prenda {
+	width:55px;
+	padding:5px;
+	margin:3px 0px;
+	}
+.agregar_pedido,
+.finalizar_pedido {
+	background-color:#339999;
+	color:#FFF;
+	font-size:25px;
+	width:100%;
+	padding:10px 0px;
+	border:none;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.15em;
+	cursor:pointer;
+	}
+.finalizar_pedido {
+	font-size:20px;
+	width:350px;
+	}
+.seguir_pedido,
+.imprimir {
+	background-color:#E5E5E5;
+	color:#4D4D4D;
+	font-size:20px;
+	width:350px;
+	padding:10px 0px;
+	border:none;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 0.1em;
+	cursor:pointer;
+	}
+.imprimir {
+	background-image:url(../img/icon_print.png);
+	background-repeat: no-repeat;
+	background-position: 25% center;
+	}
+.campo_comentarios {
+	width:100%;
+	height:150px;
+	}
+.campos {
+	display:block;
+	width:95%;
+	padding:7px 3px 7px 3px;
+	margin:5px 0px;
+	color:#333;
+	font-weight:800;
+	}
+.campos_consulta {
+	display:block;
+	width:100%;
+	padding:7px 0px;
+	margin:5px 0px;
+	color:#333;
+	font-weight:800;
+	}
+
+:-moz-placeholder {
+	color: #333;
+	}
+::-webkit-input-placeholder {
+	color: #333;
+	}
+.rad {
+    -webkit-appearance: radio;	
+}
+
+/* ====================================
+   FOOT
+   ==================================== */
+#foot {
+	width:100%;
+	background-color:#F0F0F0;
+	padding:35px 0px;
+	clear:both;
+	}
+#foot .main .columna1 {
+	float:left;
+	line-height:25px;
+	}
+#foot .main .columna2 {
+	float:right;
+	}
+#foot .main .columna1 a { color:#333; }
+#foot .main .columna2 a { color:#333; }
+
+#foot .main .columna1 span {
+	font-family: 'Raleway', sans-serif;
+	font-size:15px;
+	font-weight:600;
+	}
+.icon_fb,
+.icon_terminos,
+.icon_contacto {
+	font-family: 'Roboto', sans-serif;
+	font-size: 13px;
+	display:block;
+	padding:7px 0px 0px 35px;
+	height:27px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	}
+.icon_fb { background-image: url(../img/icon_fb.png); }
+.icon_terminos { background-image: url(../img/icon_term.png); }
+.icon_contacto { background-image: url(../img/icon_cont.png); }
+
+#copy {
+	width:100%;
+	padding:20px 0px;
+	clear:both;
+	text-align:center !important;
+	font-size:11px !important;
+	}
+

@@ -1,0 +1,110 @@
+<!-- <?php include ("seguridad.php");?>
+<?php require_once('../Connections/cone.php'); ?>
+<?php
+if (!function_exists("GetSQLValueString")) {
+function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
+{
+  if (PHP_VERSION < 6) {
+    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
+  }
+
+  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
+
+  switch ($theType) {
+    case "text":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;    
+    case "long":
+    case "int":
+      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
+      break;
+    case "double":
+      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
+      break;
+    case "date":
+      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
+      break;
+    case "defined":
+      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
+      break;
+  }
+  return $theValue;
+}
+}
+
+mysql_select_db($database_cone, $cone);
+$query_rs_banner = "SELECT * FROM veramo_banner";
+$rs_banner = mysql_query($query_rs_banner, $cone) or die(mysql_error());
+$row_rs_banner = mysql_fetch_assoc($rs_banner);
+$totalRows_rs_banner = mysql_num_rows($rs_banner);
+
+mysql_select_db($database_cone, $cone);
+$query_rs_cate_home = "SELECT * FROM veramo_categorias ORDER BY categoria ASC";
+$rs_cate_home = mysql_query($query_rs_cate_home, $cone) or die(mysql_error());
+$row_rs_cate_home = mysql_fetch_assoc($rs_cate_home);
+$totalRows_rs_cate_home = mysql_num_rows($rs_cate_home);
+?> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>VERAMO &bull; Tienda Mayorista</title>
+<link href="js/styles.css" rel="stylesheet" type="text/css" />
+<link href="js/styles-media.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+<!-- TOP  -->
+<div id="top">
+<div class="encabezado">
+    <div class="logo"><a href="home.php"><img src="img/veramo.png" width="230" height="55" alt="VERAMO &middot; Tienda Mayorista" /></a></div>
+    <!-- <?php include("cart.php"); ?> -->
+    </div>
+	<!-- <?php include("nav.php"); ?> -->
+</div>
+<!-- fin TOP  -->
+
+<!-- BANNER  -->
+<div class="imagen_resp">
+    
+    <!-- <img src="<?php echo $row_rs_banner['banner']; ?>" alt="VERAMO COLLECTION" width="1400" height="600" /> -->
+    <img src="" alt="VERAMO COLLECTION" width="1400" height="600" />
+    <div class="vacia">
+        <!-- <div id="banner_titulo"><?php echo $row_rs_banner['texto']; ?></div> -->
+        <div id="banner_titulo"></div>
+    </div>
+</div>
+<!-- fin BANNER  -->
+
+<!-- CATEGORIAS COLECCION  -->
+<div id="home">
+  <div class="main">
+    <!-- <?php do { ?>
+    <?php if ($row_rs_cate_home['id']<>9) { ?> -->
+      <!-- <div onclick="location.href='categoria.php?vid=<?php echo $row_rs_cate_home['id']; ?>';" class="home_categoria categoria_img" style=" background-image:url(<?php echo $row_rs_cate_home['imagen1']; ?>)">
+      <span class="titulo"><?php echo $row_rs_cate_home['categoria']; ?></span></div> -->
+
+      <div onclick="" class="home_categoria categoria_img" style=" background-image:url()">
+      <span class="titulo"></span></div>
+
+
+      <!-- <?php } ?>
+      <?php } while ($row_rs_cate_home = mysql_fetch_assoc($rs_cate_home)); ?> -->
+  </div>
+</div>
+<!-- fin CATEGORIAS COLECCION  -->
+
+<!-- FOOT  -->
+<!-- <?php include("footer.php"); ?> -->
+<!-- fin FOOT  -->
+
+</body>
+</html>
+<!-- <?php
+mysql_free_result($rs_banner);
+
+mysql_free_result($rs_cate_home);
+?> -->

@@ -1,0 +1,72 @@
+/*------------------------------------------------------- */
+/* Smartphones  ----------------------------------------- */
+/*------------------------------------------------------- */
+@media only screen and (max-width : 320px) {
+.main { width:96%; padding:0 2%;}
+.contenido .main { width:96%; padding:0 2%;}
+
+}
+
+/*---------------------------------------------------------------------- */
+/* Smartphones (portrait and landscape) -------------------------------- */
+/*---------------------------------------------------------------------- */
+@media only screen and (min-width : 320px) and (max-width : 479px) {
+.main { width:96%; padding:0 2%;}
+.contenido .main { width:96%; padding:0 2%;}
+.encabezado .logo {	width:230px; margin:0px 0px 0px 30px; }
+
+}
+
+/*-------------------------------------------------------------------- */
+/* ipads (portrait) -------------------------------------------------- */
+/*-------------------------------------------------------------------- */
+@media only screen and (min-width : 480px) and (max-width : 767px) {
+.main { width:96%; padding:0 2%;}
+.contenido .main { width:96%; padding:0 2%;}
+.encabezado .logo {	width:230px; margin:0px 0px 0px 30px; }
+
+}
+
+
+
+
+/*------------------------------------------------------------------ */
+/* iPads (portrait and landscape) ---------------------------------- */
+/*------------------------------------------------------------------ */
+@media only screen and (min-width : 768px) and (max-width : 959px) {
+.main { width:96%; padding:0 2%;}
+.contenido .main { width:96%; padding:0 2%;}
+.encabezado .logo {	width:230px; margin:0px 0px 0px 30px; }
+#banner_titulo { top: -180px; font-size:40px; left: 30px; }
+#categoria_titulo {
+	left: 30px;
+	width:70%;
+	top: -60px;
+	font-size:40px;
+	font-weight:300;
+	}
+.contenido_prod { padding: 170px 0px 50px 0px; }
+#columna2 {	margin-bottom:40px;	}
+#columna3 {
+	margin-left:140px;
+	}
+.prod_listado { width: 29%; margin:2%; }
+.prod_listado .foto { width: 100%; height:auto;}
+
+
+}
+
+
+/*----------------------------------------------------------------- */
+/* iPads (landscape) ---------------------------------------------- */
+/*----------------------------------------------------------------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+.main { width:96%; padding:0 2%;}
+.contenido .main { width:96%; padding:0 2%;}
+#columna2 {	width:350px; height:525px; margin-bottom:40px;}
+.prod_listado { width: 29%; margin:2%; }
+.prod_listado .foto { width: 100%; height:auto;}
+
+
+}
+
