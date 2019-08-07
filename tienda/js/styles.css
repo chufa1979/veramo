@@ -51,7 +51,7 @@ p { padding:0; margin: 0}
 	position:fixed;
 	z-index:9999;
 	overflow:auto;
-	background-image: url(../img/back_top.png);
+	background-image: url(http://www.veramo.com.ar/tienda/img/back_top.png);
 	background-repeat: repeat-x;
 	}
 .encabezado {
@@ -77,7 +77,7 @@ p { padding:0; margin: 0}
 	color:#009999;
 	font-size:13px;
 	display:block;
-	background-image: url(../img/icon_pedido.png);
+	background-image: url(http://www.veramo.com.ar/tienda/img/icon_pedido.png);
 	background-repeat: no-repeat;
 	background-position: right top;
 	padding-right:25px;
@@ -95,7 +95,7 @@ p { padding:0; margin: 0}
 	line-height:14px;
 	border-bottom:1px solid #989898;
 	border-top:1px solid #989898;
-	background-image: url(../img/back_menu.png);
+	background-image: url(http://www.veramo.com.ar/tienda/img/back_menu.png);
 	text-align:center;
 	}
 #menu_ppal .main {
@@ -179,7 +179,7 @@ h1 {
 	font-family:'Roboto Condensed', sans-serif;
 	font-size:15px;
 	text-align:center;
-	background-image: url(../img/back_cate.png);
+	background-image: url(http://www.veramo.com.ar/tienda/img/back_cate.png);
 	padding:13px 0px;
 	margin-top:284px;
 	height:20px;
@@ -352,7 +352,7 @@ h1 {
 	font-size:25px;
 	letter-spacing: 0.15em;
 	color:#4D4D4D;
-	background-image: url(../img/back_relacionados.gif);
+	background-image: url(http://www.veramo.com.ar/tienda/img/back_relacionados.gif);
 	background-repeat: no-repeat;
 	background-position: center center;
 	}
@@ -382,7 +382,7 @@ h1 {
 	position:absolute;
 	bottom:0;
 	right:0;
-	background-image: url(../img/icon_zoom.png);
+	background-image: url(http://www.veramo.com.ar/tienda/img/icon_zoom.png);
 	}
 .zoom img {
 	display: block;
@@ -510,7 +510,7 @@ input, textarea, select, button {
 	cursor:pointer;
 	}
 .imprimir {
-	background-image:url(../img/icon_print.png);
+	background-image:url(http://www.veramo.com.ar/tienda/img/icon_print.png);
 	background-repeat: no-repeat;
 	background-position: 25% center;
 	}
@@ -580,9 +580,9 @@ input, textarea, select, button {
 	background-repeat: no-repeat;
 	background-position: left center;
 	}
-.icon_fb { background-image: url(../img/icon_fb.png); }
-.icon_terminos { background-image: url(../img/icon_term.png); }
-.icon_contacto { background-image: url(../img/icon_cont.png); }
+.icon_fb { background-image: url(http://www.veramo.com.ar/tienda/img/icon_fb.png); }
+.icon_terminos { background-image: url(http://www.veramo.com.ar/tienda/img/icon_term.png); }
+.icon_contacto { background-image: url(http://www.veramo.com.ar/tienda/img/icon_cont.png); }
 
 #copy {
 	width:100%;
