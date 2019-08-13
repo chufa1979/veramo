@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <title>VERAMO &bull; Tienda Mayorista</title>
 <link href="styles_mobile.css" rel="stylesheet" type="text/css" />
-<link href="css/home.css" rel="stylesheet" type="text/css" />
 <script src="js/config.js"></script>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.session.js"></script>
@@ -14,9 +13,10 @@
    <link rel="stylesheet" type="text/css" href="js/menu/menu_left.css"  />
    <link rel="stylesheet" type="text/css" href="js/menu/menu_desplegable.css" />
    <script src="js/genera_menu.js"></script>
-   <script type="text/javascript" src="js/home.js"></script>
+   <script type="text/javascript" src='js/zoom/jquery.zoom.js'></script>
+   <script type="text/javascript" src="js/productos.js"></script>
+   
 </head>
-
 <body>
 <!-- Loading Pagina -->
 <div class="loadingpage">
@@ -26,18 +26,18 @@
 
 <!-- Menu -->
 <div id="c-menu--slide-left" class="c-menu c-menu--slide-left">
-<button class="c-menu__close">
-<table width="250" border="0" cellpadding="0" cellspacing="0">
-  <tr>
-    <td width="150" align="left"><img src="img/veramo.png" width="125" height="30" alt="VERAMO &bull; Tienda Mayorista" /></td>
-    <td align="right"><img src="img/cerrar_menu.png" width="22" height="22" alt="Volver" /></td>
-  </tr>
-</table>
-</button>
-<div id="navc"></div>
-</div>
-<div id="c-mask" class="c-mask"></div>
-<!-- fin Menu -->
+  <button class="c-menu__close">
+  <table width="250" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="150" align="left"><img src="img/veramo.png" width="125" height="30" alt="VERAMO &bull; Tienda Mayorista" /></td>
+      <td align="right"><img src="img/cerrar_menu.png" width="22" height="22" alt="Volver" /></td>
+    </tr>
+  </table>
+  </button>
+  <div id="navc"></div>
+  </div>
+  <div id="c-mask" class="c-mask"></div>
+  <!-- fin Menu -->
 
 <!-- TOP  -->
 <div id="top">
@@ -57,9 +57,11 @@
 </div>
 <!-- fin TOP  -->
 
-<!-- ENCABEZADO  --><!-- CATEGORIAS COLECCION  -->
-<div id="bannerc"></div>
-<!-- fin ENCABEZADO  --><!-- fin CATEGORIAS COLECCION  -->
+<!-- CONTENIDO  -->
+<div class="contenido_detalle" id="contenidopro">
+
+</div>
+<!-- fin CONTENIDO  -->
 
 <!-- FOOT  -->
 <div id="footc"></div>
@@ -83,6 +85,5 @@
     slideLeft.open();
   });
 </script>
-
 </body>
 </html>

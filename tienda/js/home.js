@@ -1,5 +1,9 @@
 (function($){
 $(document).ready(function(){
+	var usuario = $.session.get("user");
+	if (usuario === undefined) {
+		window.location.href = "index.html";
+	} 
 
 	////MENU////
 	var menuc = urlServicios + "nav.php";
@@ -16,7 +20,6 @@ $(document).ready(function(){
 
 	$.when( carga1, carga2, carga3, carga4 ).done(function(results1, results2, results3, results4) {
 		$('.loadingpage').hide(); //oculto mediante id
-		$(".id_nombre_user").html($.session.get("nombreapellido"));
 		$(".id_nombre_user2").html("Bienvenido/a "+$.session.get("nombreapellido"));
 		
 		

@@ -1,6 +1,9 @@
 (function($){
 $(document).ready(function(){
-
+	var usuario = $.session.get("user");
+	if (usuario === undefined) {
+		window.location.href = "index.html";
+	} 
 	////MENU////
 	var menuc = urlServicios + "nav.php";
 	var carga1 = $.get(menuc,  function(htmlexterno){ $("#navc").html(htmlexterno);});
@@ -17,13 +20,12 @@ $(document).ready(function(){
 	var carga4 = $.get(cartc,  function(htmlexterno){ $("#cartc").html(htmlexterno);});
 
 	////Cart///
-	var encabc = urlServicios + "encabezado.php";
-	var carga5 = $.get(encabc,  function(htmlexterno){ $("#imagen_resp").html(htmlexterno);});
+	var encabc = urlServicios + "encabezado.php?vid="+vid;
+	var carga5 = $.get(encabc,  function(htmlexterno){ $("#encabezado").html(htmlexterno);});
 
 
 	$.when( carga1, carga2, carga3, carga4, carga5 ).done(function(results1, results2, results3, results4, results5) {
 		$('.loadingpage').hide(); //oculto mediante id
-		$(".id_nombre_user").html($.session.get("nombreapellido"));
 		$(".id_nombre_user2").html("Bienvenido/a "+$.session.get("nombreapellido"));
 		////////
 
@@ -79,3 +81,4 @@ function MM_goToURL() { //v3.0
 function pasa(){
 	document.form_1.submit();
 }
+
