@@ -12,7 +12,15 @@ $(document).ready(function(){
 	var carga2 = $.get(footerc,  function(htmlexterno){ $("#footc").html(htmlexterno);});
 	  ////Contenido///
 	var vid = getParameterByName('vid');
-	var contenidoc = urlServicios + "categoria.php?vid="+vid;
+	var ordenar = getParameterByName('ordenar');
+	if (ordenar!='') {
+		var contenidoc = urlServicios + "categoria.php?vid="+vid+"&ordenar="+ordenar;
+	} else {
+		var contenidoc = urlServicios + "categoria.php?vid="+vid;
+	}
+	
+
+	
 	
 	var carga3 = $.get(contenidoc,  function(htmlexterno){ $(".contenido").html(htmlexterno);});
 	////Cart///
