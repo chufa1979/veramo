@@ -20,6 +20,7 @@ $(document).ready(function(){
                  $.session.set("nombreapellido", res[2]);
                  $.session.set("razon_social", res[3]);
                  $.session.set("iduser", res[4]);
+                 $.session.set("email", usuario);
 
                  $(location).attr('href','home.html')
                  

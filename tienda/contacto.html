@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<title>VERAMO &bull; Tienda Mayorista</title>
+<link href="styles_mobile.css" rel="stylesheet" type="text/css" />
+<link href="css/home.css" rel="stylesheet" type="text/css" />
+<script src="js/config.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.session.js"></script>
+
+<!-- Menu -->
+   <link rel="stylesheet" type="text/css" href="js/menu/menu_left.css"  />
+   <link rel="stylesheet" type="text/css" href="js/menu/menu_desplegable.css" />
+   <script src="js/genera_menu.js"></script>
+   <script type="text/javascript" src="js/storage.js"></script>
+   <script type="text/javascript" src="js/contacto.js"></script>
+
+<!-- Enviar -->
+	<script type='text/javascript'>
+    function guardar(){
+     var url = urlServicios + "contacto_ok.php";
+     ///var url = "contacto_ok.php"; // El script a d�nde se realizar� la petici�n.
+        $.ajax({
+               type: "POST",
+               url: url,
+               data: $("#formu").serialize(), // Adjuntar los campos del formulario enviado.
+               success: function(data)
+               {
+                   $(".contact_form").html(data); // Mostrar la respuestas del script PHP.
+               }
+             });
+        return false; // Evitar ejecutar el submit del formulario.
+     }
+    </script>
+    
+</head>
+<body>
+  <!-- Loading Pagina -->
+  <div class="loadingpage">
+    <img src="img/loadingpag.svg" alt="">
+  </div>
+  <!-- Fin Loading Pagina -->
+
+<!-- Menu -->
+<div id="c-menu--slide-left" class="c-menu c-menu--slide-left">
+  <button class="c-menu__close">
+  <table width="250" border="0" cellpadding="0" cellspacing="0">
+    <tr>
+      <td width="150" align="left"><img src="img/veramo.png" width="125" height="30" alt="VERAMO &bull; Tienda Mayorista" /></td>
+      <td align="right"><img src="img/cerrar_menu.png" width="22" height="22" alt="Volver" /></td>
+    </tr>
+  </table>
+  </button>
+  <div id="navc"></div>
+  </div>
+  <div id="c-mask" class="c-mask"></div>
+  <!-- fin Menu -->
+
+<!-- TOP  -->
+<div id="top">
+  <div class="main">
+    <div id="o-wrapper" class="o-wrapper">
+
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+		    <td width="45" align="left"><a href="javascript:void();" id="c-button--slide-left"><img src="img/menu.png" width="25" height="24" alt="MENU" /></a></td>
+		    <td width="120" align="left"><a href="home.html"><img src="img/veramo.png" width="125" height="30" alt="VERAMO &bull; Tienda Mayorista" /></a></td>
+        <td align="right"><div id="cartc"></div></td>
+        <td align="right"></td>
+	      </tr>
+	  </table>
+    </div>
+  </div>
+</div>
+<!-- fin TOP  -->
+
+<!-- CONTENIDO  -->
+<div class="contenido_detalle">
+    <div class="main">
+      <form id="formu" name="formu" method="post" action="javascript:void();" onsubmit="guardar()">
+        <div class="ruta">Inicio &raquo; <strong>Contacto</strong></div>
+        <div class="listado_misdatos">
+        <div class="contact_form">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="30" align="left" valign="middle">Raz&oacute;n Social</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><input name="razonsocial" type="text" class="campos" id="razonsocial" value="" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="left" valign="middle">Nombre</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><input name="nombre" type="text" class="campos" id="nombre" value="" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="left" valign="middle">Email</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><input name="email" type="text" class="campos" id="email" value="" /></td>
+            </tr>
+            <tr>
+              <td height="30" align="left" valign="middle"> Consulta*</td>
+            </tr>
+            <tr>
+              <td align="left" valign="top"><textarea name="consulta" cols="20" class="campo_comentarios" id="consulta" required="required" ></textarea></td>
+            </tr>
+          </table>
+          <div class="pedido_botones">
+          <input name="button" type="submit" class="agregar_pedido" id="button" value="ENVIAR" />
+        	</div>
+          </div>
+        </div>
+        
+      </form>
+    </div>
+</div>
+<!-- fin CONTENIDO  -->
+
+<!-- FOOT  -->
+<div id="footc"></div>
+<!-- fin FOOT  -->
+
+<script type="text/javascript" src="js/menu/menu.js"></script>
+<script type="text/javascript">
+
+
+  var slideLeft = new Menu({
+    wrapper: '#o-wrapper',
+    type: 'slide-left',
+    menuOpenerClass: '.c-button',
+    maskId: '#c-mask'
+  });
+
+  var slideLeftBtn = document.querySelector('#c-button--slide-left');
+
+  slideLeftBtn.addEventListener('click', function(e) {
+    e.preventDefault;
+    slideLeft.open();
+  });
+</script>
+</body>
+</html>

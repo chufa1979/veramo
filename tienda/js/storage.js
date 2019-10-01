@@ -34,13 +34,14 @@
                         '</table>' +
                         '</div>';
             } else {
-                console.log("Ingreso por showCart");
 
                 $("#cartBody").empty();
+                var linea = '';
+                var total = 0;
                 for (var i in cart) {
                     var item = cart[i];
-                    var total = 0;
-                    var linea = '<form id="form1" name="form1" method="post" action="pedir.html">' +
+                    
+                    linea += '<form id="form1" name="form1" method="post" action="pedir.html">' +
                                 '<div class="pedido_listado">'+
                                 '<table width="100%" border="0" cellspacing="0" cellpadding="0">' +
                                 '<tr>' +
@@ -279,23 +280,87 @@
                                          '<input name="titulo" type="hidden" id="titulo" value="'+item.Titulo+'" />' +
                                          '<input name="color" type="hidden" id="color" value="'+item.Color+'" />' +
                                          '</div>' +
-                                         '</form>' +
+                                         '</form>';
+                                        }
+                                linea +=                                         
                                          '<div class="pedido_total">' +
                                          '<table width="100%" border="0" cellspacing="0" cellpadding="0">' +
                                          '<tr>' +
                                          '<td align="left">&nbsp;</td>' +
                                          '<td width="100" align="right">TOTAL</td>' +
-                                         '<td width="130" align="right">$</td>' +
+                                         '<td width="130" align="right">$ ' + total + '</td>' +
                                          '<td width="50" align="center">&nbsp;</td>' +
                                          '</tr>' +
                                          '</table>' +
                                          '</div>' +
                                          '<div class="pedido_botones">' +
                                          '<input name="button2" type="button" class="seguir_pedido" id="button2" onclick="MM_goToURL("parent","home.index.html");return document.MM_returnValue" value="SEGUIR COMPRANDO" />' +
-                                         '&nbsp;&nbsp;' +
+                                         '</br>&nbsp;&nbsp;</br>' +
                                          '<input name="button" type="submit" class="finalizar_pedido" id="button" onclick="MM_goToURL("parent","pedido_confirmar.html");return document.MM_returnValue" value="FINALIZAR PEDIDO" />' +
                                          '</div>'; 
-                }
+                
             }
+            //total
             $("#cartBody").append(linea);
+        }
+
+        function muestracarromax() {
+            var maximo = 0;
+            maximo = cart.length;
+            return(maximo);
+        }
+
+        function muestracarromin() {
+            var total = 0;
+            var linea = '';
+            if (cart.length == 0) {
+
+            } else {
+                for (var i in cart) {
+                    var item = cart[i];
+                    
+                                if (item.Talle_s!=0) {
+                                    total += (item.Precio1*item.Talle_s);
+                                }
+                                if (item.Talle_m!=0) {
+                                    total += (item.Precio1*item.Talle_m);
+                                }
+                                if (item.Talle_l!=0) {
+                                    total += (item.Precio1*item.Talle_l);
+                                }
+                                if (item.Talle_xl!=0) {
+                                    total += (item.Precio1*item.Talle_xl);
+                                }
+                                if (item.Talle_xxl!=0) {
+                                    total += (item.Precio1*item.Talle_xxl);
+                                }
+                                if (item.Talle_xxxl!=0) {
+                                    total += (item.Precio1*item.Talle_xxxl);
+                                }
+                                if (item.Talle_xxxxl!=0) {
+                                    total += (item.Precio1*item.Talle_xxxxl);
+                                }
+                                if (item.Talle_1!=0) {
+                                    total += (item.Precio2*item.Talle_1);
+                                }
+                                if (item.Talle_2!=0) {
+                                    total += (item.Precio2*item.Talle_2);
+                                }
+                                if (item.Talle_3!=0) {
+                                    total += (item.Precio2*item.Talle_3);
+                                }
+                                if (item.Talle_4!=0) {
+                                    total += (item.Precio2*item.Talle_4);
+                                }
+                                if (item.Talle_5!=0) {
+                                    total += (item.Precio2*item.Talle_5);
+                                }
+                                if (item.Talle_6!=0) {
+                                    total += (item.Precio2*item.Talle_6);
+                                }
+
+                }
+                
+            }
+            return total;
         }

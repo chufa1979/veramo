@@ -20,7 +20,12 @@ $(document).ready(function(){
 
 	$.when( carga1, carga2, carga3, carga4 ).done(function(results1, results2, results3, results4) {
 		$('.loadingpage').hide(); //oculto mediante id
-		$(".id_nombre_user2").html("Bienvenido/a "+$.session.get("nombreapellido"));
+        $(".id_nombre_user2").html("Bienvenido/a "+$.session.get("nombreapellido"));
+        
+        $('#razonsocial').val($.session.get("razon_social"));
+        $('#nombre').val($.session.get("nombreapellido"));
+        $('#email').val($.session.get("email"));
+
 		
 		
 	}).fail(function() {

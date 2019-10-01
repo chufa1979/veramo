@@ -24,8 +24,8 @@ $(document).ready(function(){
 	
 	var carga3 = $.get(contenidoc,  function(htmlexterno){ $(".contenido").html(htmlexterno);});
 	////Cart///
-	var cartc = urlServicios + "cart.php";
-	var carga4 = $.get(cartc,  function(htmlexterno){ $("#cartc").html(htmlexterno);});
+	var cartc = '<a href="pedido.html" class="cart">$'+muestracarromin()+' ('+muestracarromax()+' &iacute;tems)</a>';muestracarromin();
+	var carga4 = $("#cartc").html(cartc);
 
 	////Cart///
 	var encabc = urlServicios + "encabezado.php?vid="+vid;
