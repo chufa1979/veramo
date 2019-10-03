@@ -7,11 +7,18 @@
     <title>salir</title>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/jquery.session.js"></script>
-    <script src="js/storage.js"></script>
+
+    <!-- Propios -->
+    <script type="text/javascript">
+        var lscript_1 = 'js/storage.js?rand=' + Math.random();
+    
+        document.write('<script src="' + lscript_1 + '" charset="iso-8859-1"></scr' + 'ipt>')
+    </script>
+
     <script>
         $.session.clear();
         eliminarcarro();
-        ///$(location).attr('href','index.html')
+        $(location).attr('href','index.html')
         </script>
 </head>
 <body>

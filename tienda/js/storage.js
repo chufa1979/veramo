@@ -3,7 +3,6 @@
             if (localStorage.cart)
             {
                 cart = JSON.parse(localStorage.cart);
-                ///showCart();
             }
         });
 
@@ -19,6 +18,10 @@
         }
 
         function eliminarcarro() {
+            localStorage.clear();
+        }
+
+        function eliminaunosolo() {
             localStorage.clear();
         }
 
@@ -41,7 +44,7 @@
                 for (var i in cart) {
                     var item = cart[i];
                     
-                    linea += '<form id="form1" name="form1" method="post" action="pedir.html">' +
+                    linea += '<form id="form1" name="form1" method="get" action="pedir.html">' +
                                 '<div class="pedido_listado">'+
                                 '<table width="100%" border="0" cellspacing="0" cellpadding="0">' +
                                 '<tr>' +
@@ -73,7 +76,7 @@
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_s)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=1"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -85,11 +88,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M2+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_m"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_m+'" /></td>' +
+                                                '<input name="talle_m" type="text" class="pedido_cant" id="talle_m" value="'+item.Talle_m+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_m)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=2"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -101,11 +104,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M3+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_l+'" /></td>' +
+                                                '<input name="talle_l" type="text" class="pedido_cant" id="talle_l" value="'+item.Talle_l+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_l)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=3"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -117,11 +120,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M4+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_xl+'" /></td>' +
+                                                '<input name="talle_xl" type="text" class="pedido_cant" id="talle_xl" value="'+item.Talle_xl+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_xl)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=4"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -133,11 +136,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M5+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_xxl+'" /></td>' +
+                                                '<input name="talle_xxl" type="text" class="pedido_cant" id="talle_xxl" value="'+item.Talle_xxl+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_xxl)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=5"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -149,11 +152,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M6+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_xxxl+'" /></td>' +
+                                                '<input name="talle_xxxl" type="text" class="pedido_cant" id="talle_xxxl" value="'+item.Talle_xxxl+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_xxxl)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=6"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -165,11 +168,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M7+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_xxxl+'" /></td>' +
+                                                '<input name="talle_xxxxl" type="text" class="pedido_cant" id="talle_xxxxl" value="'+item.Talle_xxxxl+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio1+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio1*item.Talle_xxxxl)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=7"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -181,11 +184,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M8+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_1+'" /></td>' +
+                                                '<input name="talle_1" type="text" class="pedido_cant" id="talle_1" value="'+item.Talle_1+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio2+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio2*item.Talle_1)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=8"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -197,11 +200,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M9+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_2+'" /></td>' +
+                                                '<input name="talle_2" type="text" class="pedido_cant" id="talle_2" value="'+item.Talle_2+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio2+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio2*item.Talle_2)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=9"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -213,11 +216,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M10+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_3+'" /></td>' +
+                                                '<input name="talle_3" type="text" class="pedido_cant" id="talle_3" value="'+item.Talle_3+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio2+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio2*item.Talle_3)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=10"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -229,11 +232,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M11+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_4+'" /></td>' +
+                                                '<input name="talle_4" type="text" class="pedido_cant" id="talle_4" value="'+item.Talle_4+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio2+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio2*item.Talle_4)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=11"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -245,11 +248,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M12+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_5+'" /></td>' +
+                                                '<input name="talle_5" type="text" class="pedido_cant" id="talle_5" value="'+item.Talle_5+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio2+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio2*item.Talle_5)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=12"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -261,11 +264,11 @@
                                                 '<tr>' +
                                                 '<td width="45" align="left">'+item.M13+'</td>' + 
                                                 '<td width="45" align="left"><label for="talle_l"></label>' +
-                                                '<input name="talle_s" type="text" class="pedido_cant" id="talle_s" value="'+item.Talle_6+'" /></td>' +
+                                                '<input name="talle_6" type="text" class="pedido_cant" id="talle_6" value="'+item.Talle_6+'" /></td>' +
                                                 '<td width="45" align="left"><input name="imageField2" type="image" class="bot" id="imageField2" src="img/refresh.png" alt="Actualizar" /></td>' +
                                                 '<td align="right">$'+item.Precio2+'</td>' +
                                                 '<td width="70" align="right">$'+(item.Precio2*item.Talle_6)+'</td>' +
-                                                '<td width="40" align="center"><a href="#"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
+                                                '<td width="40" align="center"><a href="pedir.html?eliminar='+item.Titulo+'&tama=13"><img src="img/quitar.png" width="16" height="16" style=" width:16px; height:16px;"/></a></td>' +
                                                 '</tr>' +
                                                 '</table>' +
                                                 '</div>';
@@ -280,6 +283,26 @@
                                          '<input name="titulo" type="hidden" id="titulo" value="'+item.Titulo+'" />' +
                                          '<input name="color" type="hidden" id="color" value="'+item.Color+'" />' +
                                          '</div>' +
+                                         '<input name="vm1" type="hidden" id="vid" value="'+item.Talle_s+'" />' +
+                                         '<input name="vm2" type="hidden" id="vm2" value="'+item.Talle_m+'" />' +
+                                         '<input name="vm3" type="hidden" id="vm3" value="'+item.Talle_l+'" />' +
+                                         '<input name="vm4" type="hidden" id="vm4" value="'+item.Talle_xl+'" />' +
+                                         '<input name="vm5" type="hidden" id="vm5" value="'+item.Talle_xxl+'" />' +
+                                         '<input name="vm6" type="hidden" id="vm6" value="'+item.Talle_xxxl+'" />' +
+                                         '<input name="vm7" type="hidden" id="vm7" value="'+item.Talle_xxxxl+'" />' +
+                                         '<input name="vm8" type="hidden" id="vm8" value="'+item.Talle_1+'" />' +
+                                         '<input name="vm9" type="hidden" id="vm9" value="'+item.Talle_2+'" />' +
+                                         '<input name="vm10" type="hidden" id="vm10" value="'+item.Talle_3+'" />' +
+                                         '<input name="vm11" type="hidden" id="vm11" value="'+item.Talle_4+'" />' +
+                                         '<input name="vm12" type="hidden" id="vm12" value="'+item.Talle_5+'" />' +
+                                         '<input name="vm13" type="hidden" id="vm13" value="'+item.Talle_6+'" />' +
+                                         '<input name="vid" type="hidden" id="vid" value="'+item.Id+'" />' +
+                                         '<input name="id" type="hidden" id="id" value="'+item.Id+'" />' +
+                                         '<input name="articulo" type="hidden" id="articulo" value="'+item.Articulo+'" />' +
+                                         '<input name="titulo" type="hidden" id="titulo" value="'+item.Titulo+'" />' +
+                                         '<input name="precio1" type="hidden" id="precio1" value="'+item.Precio1+'" />' +
+                                         '<input name="precio2" type="hidden" id="precio2" value="'+item.Precio2+'" />' +
+                                         '<input name="imagenp" type="hidden" id="imagenp" value="'+item.Imagenp+'" />' +
                                          '</form>';
                                         }
                                 linea +=                                         

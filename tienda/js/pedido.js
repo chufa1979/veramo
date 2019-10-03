@@ -9,8 +9,8 @@
 		var carga2 = $.get(footerc,  function(htmlexterno){ $("#footc").html(htmlexterno);});
     
 		////Cart///
-		var cartc = urlServicios + "cart.php";
-		var carga4 = $.get(cartc,  function(htmlexterno){ $("#cartc").html(htmlexterno);});
+		var cartc = '<a href="pedido.html" class="cart">$'+muestracarromin()+' ('+muestracarromax()+' &iacute;tems)</a>';muestracarromin();
+		var carga4 = $("#cartc").html(cartc);
 	
 		$.when( carga1, carga2, carga4 ).done(function(results1, results2, results4) {
 			$('.loadingpage').hide(); //oculto mediante id
