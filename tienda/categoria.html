@@ -12,12 +12,18 @@
 <!-- Menu --> 
   <link rel="stylesheet" type="text/css" href="js/menu/menu_left.css"  />
   <link rel="stylesheet" type="text/css" href="js/menu/menu_desplegable.css" />
-  <script src="js/genera_menu.js"></script>
 <!-- Lazy Load -->
 <script src="js/lazyload/jquery.lazyload.js?v=1.9.1"></script>
-<script type="text/javascript" src="js/menu/menu.js"></script>  
-<script type="text/javascript" src="js/storage.js"></script>
-<script type="text/javascript" src="js/categoria.js"></script>
+<!-- Propios -->
+<script type="text/javascript">
+  var lscript_1 = 'js/menu.js?rand=' + Math.random();
+  var lscript_2 = 'js/storage.js?rand=' + Math.random();
+  var lscript_3 = 'js/categoria.js?rand=' + Math.random();
+
+  document.write('<script src="' + lscript_1 + '" charset="iso-8859-1"></scr' + 'ipt>')
+  document.write('<script src="' + lscript_2 + '" charset="iso-8859-1"></scr' + 'ipt>')
+  document.write('<script src="' + lscript_3 + '" charset="iso-8859-1"></scr' + 'ipt>')
+</script>
 
 </head>
 <body>

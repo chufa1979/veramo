@@ -4,10 +4,16 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <title>VERAMO &bull; Tienda Mayorista</title>
-<script src="js/config.js"></script>
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.session.js"></script>
-<script src="js/index.js"></script>
+<!-- Propios --> 
+<script type="text/javascript">
+  var lconfig = 'js/config.js?rand=' + Math.random();
+  var lindex = 'js/index.js?rand=' + Math.random();
+
+  document.write('<script src="' + lconfig + '" charset="iso-8859-1"></scr' + 'ipt>')
+  document.write('<script src="' + lindex + '" charset="iso-8859-1"></scr' + 'ipt>')
+</script>
 
 <link href="css/index.css" rel="stylesheet" type="text/css" />
 </head>

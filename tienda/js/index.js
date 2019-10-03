@@ -20,8 +20,16 @@ $(document).ready(function(){
                  $.session.set("nombreapellido", res[2]);
                  $.session.set("razon_social", res[3]);
                  $.session.set("iduser", res[4]);
-                 $.session.set("email", usuario);
-
+                 $.session.set("email",  res[5]);
+                 $.session.set("razon_social",  res[6]);
+                 $.session.set("cuit",  res[7]);
+                 $.session.set("direccion",  res[8]);
+                 $.session.set("localidad",  res[9]);
+                 $.session.set("provincia",  res[10]);
+                 $.session.set("cp",  res[11]);
+                 $.session.set("telefono",  res[12]);
+                 $.session.set("celular",  res[13]);
+                 
                  $(location).attr('href','home.html')
                  
                }

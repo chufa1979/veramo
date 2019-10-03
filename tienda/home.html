@@ -10,12 +10,20 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/jquery.session.js"></script>
 
-<!-- Menu -->
+  <!-- Menu -->
    <link rel="stylesheet" type="text/css" href="js/menu/menu_left.css"  />
    <link rel="stylesheet" type="text/css" href="js/menu/menu_desplegable.css" />
-   <script src="js/genera_menu.js"></script>
-   <script type="text/javascript" src="js/storage.js"></script>
-   <script type="text/javascript" src="js/home.js"></script>
+  <!-- Propios -->   
+   <script type="text/javascript">
+    var lscript_1 = 'js/storage.js?rand=' + Math.random();
+    var lscript_2 = 'js/index.js?rand=' + Math.random();
+    var lscript_3 = 'js/home.js?rand=' + Math.random();
+  
+    document.write('<script src="' + lscript_1 + '" charset="iso-8859-1"></scr' + 'ipt>')
+    document.write('<script src="' + lscript_2 + '" charset="iso-8859-1"></scr' + 'ipt>')
+    document.write('<script src="' + lscript_3 + '" charset="iso-8859-1"></scr' + 'ipt>')
+  </script>
+
 </head>
 
 <body>
