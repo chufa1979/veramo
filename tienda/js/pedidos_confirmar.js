@@ -32,7 +32,20 @@ $(document).ready(function(){
     genera_menu();
 		  
     //// Genero el carro
-    showCartEnvio();
+	showCartEnvio();
+
+	$("#d1").html($.session.get("razon_social"));
+	$("#d2").html($.session.get("cuit"));
+	$("#d3").html($.session.get("direccion"));
+	$("#d4").html($.session.get("localidad"));
+	$("#d5").html($.session.get("provincia"));
+	$("#d6").html($.session.get("cp"));
+	$("#d7").html($.session.get("nombreapellido"));
+	$("#d8").html($.session.get("telefono"));
+	$("#d9").html($.session.get("email"));
+	$("#d10").html($.session.get("celular"));
+
+	
 	  
 
 

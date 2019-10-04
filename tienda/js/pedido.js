@@ -26,6 +26,14 @@
 		  
 		//// Genero el carro
 		showCart();
+
+		$( "#seguir" ).click(function() {
+			$(location).attr('href','home.html');
+		});
+
+		$( "#cerrar" ).click(function() {
+			$(location).attr('href','pedido_confirmar.html');
+		});
 	
 	
 	

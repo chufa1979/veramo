@@ -317,9 +317,9 @@
                                          '</table>' +
                                          '</div>' +
                                          '<div class="pedido_botones">' +
-                                         '<input name="button2" type="button" class="seguir_pedido" id="button2" onclick="MM_goToURL("parent","home.index.html");return document.MM_returnValue" value="SEGUIR COMPRANDO" />' +
+                                         '<input name="button2" type="button" class="seguir_pedido" name="seguir" id="seguir" value="SEGUIR COMPRANDO" />' +
                                          '</br>&nbsp;&nbsp;</br>' +
-                                         '<input name="button" type="submit" class="finalizar_pedido" id="button" onclick="MM_goToURL("parent","pedido_confirmar.html");return document.MM_returnValue" value="FINALIZAR PEDIDO" />' +
+                                         '<input name="button" type="submit" class="finalizar_pedido" name="cerrar" id="cerrar"  value="FINALIZAR PEDIDO" />' +
                                          '</div>'; 
                 
             }
@@ -668,8 +668,8 @@
 
 
 
-        function MM_goToURL() { //v3.0
-            var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+        function MM_goToURL2() { //v3.0
+            var i, args=MM_goToURL2.arguments; document.MM_returnValue = false;
             for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
          }
       
